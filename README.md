@@ -2,7 +2,7 @@
 
 # Processamento Digital de Imagens (Optativa)
 
-## 5º Semestre
+## 6º Semestre
 
 ### **Professor:** Raimundo Vasconcelos
 

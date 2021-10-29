@@ -1,5 +1,5 @@
 from typing import Any, Callable, Generator, Iterable, Tuple, Optional
-from itertools import product, islice
+from itertools import product
 from PIL import Image
 import sys
 from os import path
@@ -45,18 +45,6 @@ def transform_pixel(image: Image, coordinate: Tuple[int, int], bit_plane: int, b
     pixel_binary = f"{pixel[bit_plane]:08b}"
     pixel_binary_transformed = pixel_binary[:-1] + bit
     pixel_transformed = pixel[:bit_plane] + tuple([int(pixel_binary_transformed, base=2)]) + pixel[(bit_plane + 1) :]
-
-    # print(
-    #     pixel,
-    #     pixel[bit_plane],
-    #     pixel_binary,
-    #     "+",
-    #     bit,
-    #     "->",
-    #     pixel_binary_transformed,
-    #     int(pixel_binary_transformed, base=2),
-    #     pixel_transformed,
-    # )
 
     return pixel_transformed
 

@@ -91,8 +91,8 @@ image_pixels = image_in.height * image_in.width
 text_bits = len(text_bytearray) * 8
 
 if (bits_level > 3 and text_bits > (image_pixels * 3)) or text_bits > image_pixels:
-            print("Error: The text does not fit into the image")
-            exit(0)
+    print("Error: The text does not fit into the image")
+    exit(0)
 ```
 
 Para gravar a mensagem dentro da imagem, é necessário uma conversão do mesmo para bits (0 e 1). Então foi usado uma fila de bits, onde os bytes seriam convertidos apenas quando necessário, evitando gastar memória desnecessariamente. Isso foi feito com ajuda da seguinte função.
@@ -199,10 +199,10 @@ Nessa função é verificada se existe uma imagem de saída (saída da codifica�
 
 ```python
 args = validate_args()
-    if args is None:
-        exit(0)
+if args is None:
+    exit(0)
 
-    image_out_arg, bits_level, text_out_arg = args
+image_out_arg, bits_level, text_out_arg = args
 ```
 
 O arquivo de imagem é lido, enquanto o de texo, se existir é reescrito, e se não existir é criado. O arquivo de texto é aberto no modo *wb*, que significa escrita em modo binário.

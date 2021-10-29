@@ -274,7 +274,17 @@ Morbi ultricies, tellus quis dictum vestibulum, nibh metus dictum justo, vel tri
 Etiam efficitur tristique volutpat. Mauris convallis orci a mi efficitur, sit amet tincidunt augue finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed ac posuere nibh. Phasellus vitae nunc sagittis, rutrum odio sed, accumsan nibh. Proin placerat ipsum nec purus pharetra, ut venenatis dui egestas. Nulla facilisi. Sed ut turpis ut erat tincidunt aliquam ac eu risus. Fusce fringilla, ligula non interdum laoreet, erat nulla finibus tortor, sit amet condimentum velit erat ut dui. Donec dapibus nisi orci, id luctus massa vehicula a. Vivamus enim justo, lacinia sed purus sit amet, iaculis dignissim odio. Integer quam ipsum, eleifend a posuere sit amet, dignissim vel ex. Proin scelerisque quam ut orci ornare, imperdiet auctor ipsum placerat. Proin lobortis maximus malesuada. Nulla id leo nec ipsum tempor lobortis aliquam quis nunc.
 ```
 
-Para os quatro possíveis valores do argumento *bits_plane*. E em todos os testes, as fases de codificação e decodificação foram executadas com sucesso.
+Para os quatro possíveis valores do argumento *bits_level*. E em todos os testes, as fases de codificação e decodificação foram executadas com sucesso.
+
+Para fins de demonstração, a mensagem mostrada acima foi gravada dentro da imagem também mostrada acima, com o argumento *bits_level* igual a 3.
+
+![baboon-comparison](https://i.imgur.com/z4FU9ck.png)
+
+A princípio não parece haver mudança alguma, no entando, ao darmos zoom o suficiente para ver os valores individuais dos pixels.
+
+![baboon-rgb-comparison](https://i.imgur.com/a2xNsI7.png)
+
+É possível notar leves mudanças nos três canais do espectro RGB.
 
 ---
 
@@ -282,4 +292,10 @@ Para os quatro possíveis valores do argumento *bits_plane*. E em todos os teste
 
 - Para fins didáticos, neste relatório relativo aos trechos de código, não foi utilizado os *type hints* do Python, que facilita o momento do desenvolvimento dos algoritmos, porque adiciona tipagem as variáveis. Mas não possui nenhum impacto na execução do programa.
 - Para a mensagem ser decodificada corretamente, o argumento *plano_bits* precisa ser o mesmo tanto na fase de codificação quanto na fase de decodificação.
-- O programa não funcionará caso o arquivo passado pelo argumento *imagem_entrada* não seja uma imagem, prefencialmente no formato png. E caso o arquivo de texto passado pelo argumento *texto_entrada* não for um arquivo de texto (.txt).
+- O programa não funcionará caso o arquivo passado pelo argumento *imagem_entrada* não seja uma imagem, prefencialmente no formato png. E caso o arquivo de texto passado pelo argumento *texto_entrada* não for um arquivo de texto (.txt) que esteja no formato utf-8.
+- O nome dos argumentos foram citados pelo relatório de forma intercambiável, esses argumentos são:
+  - plano_bits: *bits_level*
+  - imagem_entrada: *image_in*
+  - imagem_saida: *image_out*
+  - texto_entrada: *text*
+  - texto_saida: *text_out*

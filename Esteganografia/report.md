@@ -280,6 +280,6 @@ Para os quatro possíveis valores do argumento *bits_plane*. E em todos os teste
 
 ### Observações
 
-Para fins didáticos, neste relatório relativo aos trechos de código, não foi utilizado os *type hints* do Python, que facilita o momento do desenvolvimento dos algoritmos, porque adiciona tipagem as variáveis. Mas não possui nenhum impacto na execução do programa.
-
-Para a mensagem ser decodificada corretamente, o argumento *bits_level* precisa ser o mesmo tanto na fase de codificação quanto na fase de decodificação.
+- Para fins didáticos, neste relatório relativo aos trechos de código, não foi utilizado os *type hints* do Python, que facilita o momento do desenvolvimento dos algoritmos, porque adiciona tipagem as variáveis. Mas não possui nenhum impacto na execução do programa.
+- Para a mensagem ser decodificada corretamente, o argumento *plano_bits* precisa ser o mesmo tanto na fase de codificação quanto na fase de decodificação.
+- O programa não funcionará caso o arquivo passado pelo argumento *imagem_entrada* não seja uma imagem, prefencialmente no formato png. E caso o arquivo de texto passado pelo argumento *texto_entrada* não for um arquivo de texto (.txt).
